@@ -9,11 +9,11 @@ const makeToast = async () => {
 
   try {
     
-    let response = (await fetch('https://mercados.ambito.com//dolar/oficial/variacion')).json();
+    let response = (await fetch('https://mercados.ambito.com//dolar/bna/variacion')).json();
 
     await response.then((json) => {
       toast({
-        title: `oficial toast - Updated: ${json.fecha}`,
+        title: `bna toast - Updated: ${json.fecha}`,
         message: `Compra: ${json.compra} -- Venta: ${json.venta}`,
         icon: './icon/usd.jpg'
       }).catch((err) => { 
