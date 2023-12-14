@@ -8,8 +8,8 @@ async function delay(ms) {
 const makeToast = async () => {
 
   try {
-    
-    let response = (await fetch('https://mercados.ambito.com//dolar/bna/variacion')).json();
+
+    let response = (await fetch('https://mercados.ambito.com//dolarnacion/variacion')).json();
 
     await response.then((json) => {
       toast({
